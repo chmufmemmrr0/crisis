@@ -37,7 +37,7 @@ export default function Homepage() {
                 <div className="flex flex-row gap-8 w-full justify-center"> {/* buttons */}
                     <div className="relative">
                         <DefaultButton text="Quiz" onClick={handleClick} />
-                        <img src="public/assets/snowButton.png" alt="snowButton" className="absolute -top-2 w-[300px] block pointer-events-none select-none" />
+                        <img src="/crisis/assets/snowButton.png" alt="snowButton" className="absolute -top-2 w-[300px] block pointer-events-none select-none" />
                     </div>
                     
 
@@ -49,12 +49,12 @@ export default function Homepage() {
                     />
                     <div className="relative">
                         <DefaultButton text="Name That Tune" onClick={() => nav("Tune")} />
-                        <img src="public/assets/snowButton.png" alt="snowButton" className="absolute -top-2 w-[300px] block pointer-events-none select-none" />
+                        <img src="/crisis/assets/snowButton.png" alt="snowButton" className="absolute -top-2 w-[300px] block pointer-events-none select-none" />
                     </div>
                     
                 </div>
             </div>
-            <img src="public/assets/snow.svg" alt="snow" className="absolute bottom-0 left-0 w-full block pointer-events-none select-none" />
+            <img src="/crisis/assets/snow.svg" alt="snow" className="absolute bottom-0 left-0 w-full block pointer-events-none select-none" />
             </div>
 
         </div>

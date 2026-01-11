@@ -60,7 +60,7 @@ export default function TuneCell({songId, startTime, songTitle}: TuneCellProps){
         present?.addEventListener("click", () => {
             present.classList.add("hidden");
         });
-        let string = "bg-[url(public/assets/" + giftColor + "Gift.png)]";
+        let string = "bg-[url(/crisis/assets/" + giftColor + "Gift.png)]";
         if(present) present.classList.add(string);
     // })
 
@@ -71,7 +71,7 @@ export default function TuneCell({songId, startTime, songTitle}: TuneCellProps){
             <div className="w-full flex justify-center pt-2"><RoundButton icon={isPlayingLong ? Pause : ClockFading} iconSize={32} size={20} onClick={() => Play(startTime)} /></div>
             <div className="w-full flex justify-center pt-2"><RoundButton icon={Eye} iconSize={32} size={20} onClick={() => Reveal()} /></div>
             <audio className="hidden" id={`song${songId}`}>
-                <source src={"public/assets/songs/"+songId+".mp3"} />
+                <source src={"/crisis/assets/songs/"+songId+".mp3"} />
             </audio>
             <div id={`present${songId}`} className={`w-full h-full z-50 absolute top-0 left-0  bg-contain bg-center cursor-pointer`}> </div>
         </div>
