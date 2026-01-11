@@ -62,7 +62,7 @@ export default function TuneCell({songId, startTime, songTitle}: TuneCellProps){
             <audio className="hidden" id={`song${songId}`}>
                 <source src={"/crisis/assets/songs/"+songId+".mp3"} />
             </audio>
-            <Present />
+            <Present songId={songId}/>
         </div>
     );
 }
