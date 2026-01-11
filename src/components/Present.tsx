@@ -18,8 +18,11 @@ export default function Present({ songId }: PresentProps) {
     <div
       id={`present${songId}`}
       onClick={() => setHidden(true)}
+      style={{
+        backgroundImage: `url(/crisis/assets/${giftColor}Gift.png)`,
+      }}
       className={`
-        z-100 absolute w-full h-full top-0 left-0 cursor-pointer bg-center bg-cover ${hidden ? "hidden" : ""} bg-[url(/crisis/assets/${giftColor}Gift.png)]
+        z-100 absolute w-full h-full top-0 left-0 cursor-pointer bg-center bg-cover ${hidden ? "hidden" : ""}
       `}
     />
   );
