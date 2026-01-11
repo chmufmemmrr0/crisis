@@ -21,15 +21,15 @@ export default function Tune() {
     setInterval(function(){
       lightsCounter++;
       if(lightsImg)
-        lightsImg.setAttribute("src", "src/assets/lights_" + lightsCounter + ".svg");
+        lightsImg.setAttribute("src", "src/public/assets/lights_" + lightsCounter + ".svg");
       if (lightsCounter===3) lightsCounter=0;
     }, 1000)
   }
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-slate-100 to-cyan-200 flex justify">
-      <img src="src/assets/lights_1.svg" alt="lights" id="lights" className="absolute top-0 left-0 w-full block pointer-events-none select-none" />
-      <img src="src/assets/snow.svg" alt="snow" className="z-1 absolute bottom-0 left-0 w-full block pointer-events-none select-none" />
+      <img src="src/public/assets/lights_1.svg" alt="lights" id="lights" className="absolute top-0 left-0 w-full block pointer-events-none select-none" />
+      <img src="src/public/assets/snow.svg" alt="snow" className="z-1 absolute bottom-0 left-0 w-full block pointer-events-none select-none" />
       <Snow />
       <div className="z-10 absolute top-6 pl-4 w-full"><RoundButton icon={Home} iconSize={32} onClick={() => {goBack();}} /></div>
       <div className="z-10 w-2/3 h-auto m-auto px-16 box-border">
