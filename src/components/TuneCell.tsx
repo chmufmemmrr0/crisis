@@ -1,5 +1,6 @@
 import { CirclePlay , Eye, ClockFading, Pause } from "lucide-react";
 import RoundButton from "./RoundButton";
+import Present from "./Present";
 import { useState } from "react";
 
 interface TuneCellProps {
@@ -51,18 +52,6 @@ export default function TuneCell({songId, startTime, songTitle}: TuneCellProps){
     }
 
 
-    let rand = Math.floor(Math.random() * 3);
-    let giftColor = "yellow";
-    if(rand != 2) giftColor = rand ? "green" : "blue";
-
-    // document.addEventListener("DOMContentLoaded", () => {
-        const present = document.querySelector("#present" + songId);
-        present?.addEventListener("click", () => {
-            present.classList.add("hidden");
-        });
-        let string = "bg-[url(/crisis/assets/" + giftColor + "Gift.png)]";
-        if(present) present.classList.add(string);
-    // })
 
 
     return(
@@ -73,7 +62,7 @@ export default function TuneCell({songId, startTime, songTitle}: TuneCellProps){
             <audio className="hidden" id={`song${songId}`}>
                 <source src={"/crisis/assets/songs/"+songId+".mp3"} />
             </audio>
-            <div id={`present${songId}`} className={`w-full h-full z-50 absolute top-0 left-0  bg-contain bg-center cursor-pointer`}> </div>
+            <Present />
         </div>
     );
 }

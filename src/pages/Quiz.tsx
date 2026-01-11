@@ -90,7 +90,7 @@ const shadowColor =
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-100 to-cyan-200">
       <Snow />
       <div className="absolute top-6 pl-4 w-full"><RoundButton icon={Home} iconSize={32} onClick={() => {goBack();}} /></div>
-      <div className={`p-6 bg-slate-50 rounded-2xl h-64 w-1/4 ${borderColor} border-4 z-30 flex flex-col justify-center items-center`} style={{ boxShadow: shadowColor }}>
+      <div className={`p-6 bg-slate-50 rounded-2xl h-1/4 w-1/2 md:h-64 md:w-1/4 ${borderColor} border-4 z-30 flex flex-col justify-center items-center`} style={{ boxShadow: shadowColor }}>
         <p className="text-3xl mb-6">{currentQuestion.text}</p>
 
         <DefaultButtons text="Show Answer" onClick={() => {
