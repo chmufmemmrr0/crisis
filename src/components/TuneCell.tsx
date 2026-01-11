@@ -56,9 +56,9 @@ export default function TuneCell({songId, startTime, songTitle}: TuneCellProps){
 
     return(
         <div className='relative overflow-clip w-full h-24 p-2 flex bg-slate-50 rounded-full shadow-xl text-2xl items-center justify-center' id={`songDiv${songId}`}>
-            <div className="w-full flex justify-center pt-2"><RoundButton icon={isPlaying ? Pause : CirclePlay} iconSize={32} size={20} onClick={() => Play(0)} /></div>
-            <div className="w-full flex justify-center pt-2"><RoundButton icon={isPlayingLong ? Pause : ClockFading} iconSize={32} size={20} onClick={() => Play(startTime)} /></div>
-            <div className="w-full flex justify-center pt-2"><RoundButton icon={Eye} iconSize={32} size={20} onClick={() => Reveal()} /></div>
+            <div className="z-0 w-full flex justify-center pt-2"><RoundButton icon={isPlaying ? Pause : CirclePlay} iconSize={32} size={20} onClick={() => Play(0)} /></div>
+            <div className="z-0 w-full flex justify-center pt-2"><RoundButton icon={isPlayingLong ? Pause : ClockFading} iconSize={32} size={20} onClick={() => Play(startTime)} /></div>
+            <div className="z-0 w-full flex justify-center pt-2"><RoundButton icon={Eye} iconSize={32} size={20} onClick={() => Reveal()} /></div>
             <audio className="hidden" id={`song${songId}`}>
                 <source src={"/crisis/assets/songs/"+songId+".mp3"} />
             </audio>

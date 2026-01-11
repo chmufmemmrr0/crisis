@@ -23,10 +23,10 @@ export default function RoundButton({
       onMouseUp={() => setPressed(false)}
       onMouseLeave={() => setPressed(false)}
       onClick={onClick}
-      className={`relative flex items-center justify-center w-28 h-28 md:w-16 md:h-16 rounded-full bg-cyan-500 shadow-md focus:outline-none active:shadow-inner transition-all duration-150`}
+      className={`relative flex items-center justify-center w-16 h-16 rounded-full bg-cyan-500 shadow-md focus:outline-none active:shadow-inner transition-all duration-150`}
     >
       <span
-        className={`absolute w-28 h-28 md:w-16 md:h-16 rounded-full bg-cyan-300 transform transition-all duration-150 ${
+        className={`absolute w-16 h-16 rounded-full bg-cyan-300 transform transition-all duration-150 ${
           pressed ? "translate-y-0" : "-translate-y-2"
         }`}
       />
