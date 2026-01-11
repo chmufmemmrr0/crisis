@@ -12,7 +12,6 @@ interface RoundButtonProps {
 export default function RoundButton({
   icon: Icon,
   iconSize = 16,
-  size = 20,
   onClick,
 }: RoundButtonProps) {
   const [pressed, setPressed] = useState(false);
