@@ -3,6 +3,7 @@ import RoundButton from "../components/RoundButton";
 import TuneCell from "../components/TuneCell"
 import Snow from "../components/Snow";
 import { Home } from "lucide-react";
+import Lights from "../components/Lights";
 
 export default function Tune() {
   const navigate = useNavigate();
@@ -12,23 +13,9 @@ export default function Tune() {
   };
 
 
-  const lightsImg = document.querySelector("#lights");
-  let lightsCounter = 0;
-  let flag = true;
-  if(flag)
-  {
-    flag = false;
-    setInterval(function(){
-      lightsCounter++;
-      if(lightsImg)
-        lightsImg.setAttribute("src", "/crisis/assets/lights_" + lightsCounter + ".svg");
-      if (lightsCounter===3) lightsCounter=0;
-    }, 1000)
-  }
-
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-slate-100 to-cyan-200 flex justify">
-      <img src="/crisis/assets/lights_1.svg" alt="lights" id="lights" className="absolute top-0 left-0 w-full block pointer-events-none select-none" />
+      <Lights />
       <img src="/crisis/assets/snow.svg" alt="snow" className="z-1 absolute bottom-0 left-0 w-full block pointer-events-none select-none" />
       <Snow />
       <div className="z-10 absolute top-6 pl-4 w-full"><RoundButton icon={Home} iconSize={32} onClick={() => {goBack();}} /></div>
