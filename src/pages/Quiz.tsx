@@ -97,7 +97,7 @@ const shadowColor =
                 setShowAnswer(true);
         }} sizeMulti={0.5}/>
 
-        <img src="src/public/assets/santa.png" alt="santa" className="fixed left-[53rem] top-[26rem] w-48 block pointer-events-none select-none transform scale-x-[-1]" />
+        <img src="public/assets/santa.png" alt="santa" className="fixed left-[53rem] top-[26rem] w-48 block pointer-events-none select-none transform scale-x-[-1]" />
       </div>
 
       {showAnswer && (
@@ -119,7 +119,7 @@ const shadowColor =
           </div>
         </>
       )}
-      <img src="src/public/assets/snow.svg" alt="snow" className="absolute bottom-0 left-0 w-full block pointer-events-none select-none" />
+      <img src="public/assets/snow.svg" alt="snow" className="absolute bottom-0 left-0 w-full block pointer-events-none select-none" />
 
     </div>
   );
