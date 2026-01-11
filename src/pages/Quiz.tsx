@@ -90,14 +90,14 @@ const shadowColor =
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-100 to-cyan-200">
       <Snow />
       <div className="absolute top-6 pl-4 w-full"><RoundButton icon={Home} iconSize={32} onClick={() => {goBack();}} /></div>
-      <div className={`p-6 bg-slate-50 rounded-2xl h-96 w-2/4 ${borderColor} border-4 z-30 flex flex-col justify-center items-center`} style={{ boxShadow: shadowColor }}>
+      <div className={`relative p-6 bg-slate-50 rounded-2xl h-96 w-2/4 ${borderColor} border-4 z-30 flex flex-col justify-center items-center`} style={{ boxShadow: shadowColor }}>
         <p className="text-3xl mb-6">{currentQuestion.text}</p>
 
         <DefaultButtons text="Show Answer" onClick={() => {
                 setShowAnswer(true);
         }} sizeMulti={0.5}/>
 
-        <img src="/crisis/assets/santa.png" alt="santa" className="fixed left-1/4 -translate-x-1/2 top-1/3 -translate-y-1/3 w-48 block pointer-events-none select-none transform scale-x-[-1]" />
+        <img src="/crisis/assets/santa.png" alt="santa" className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/3 w-48 block pointer-events-none select-none transform scale-x-[-1]" />
       </div>
 
       {showAnswer && (
