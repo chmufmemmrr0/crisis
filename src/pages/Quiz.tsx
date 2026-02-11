@@ -6,6 +6,7 @@ import DefaultButtons from "../components/DefaultButtons";
 import Snow from "../components/Snow";
 import { Home } from "lucide-react";
 import RoundButton from "../components/RoundButton";
+import TimeLimit from "../components/TimeLimit";
 
 const STORAGE_KEY = "usedQuestions";
 
@@ -73,6 +74,7 @@ export default function QuizPage() {
         >
           Reset questions
         </button>
+        <div className="z-10 absolute top-6 pl-4 w-full"><RoundButton icon={Home} iconSize={32} onClick={() => {goBack();}} /></div>
       </div>
     );
 
@@ -97,7 +99,8 @@ const shadowColor =
                 setShowAnswer(true);
         }} sizeMulti={0.5}/>
 
-        <img src="/crisis/assets/santa.png" alt="santa" className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/3 w-48 block pointer-events-none select-none transform scale-x-[-1]" />
+        <img src="/crisis/assets/santa.png" alt="santa" className="absolute left-0 top-0 -translate-x-20 -translate-y-1/3 w-48 block pointer-events-none select-none transform scale-x-[-1]" />
+        <TimeLimit timeLimitSeconds={20}></TimeLimit>
       </div>
 
       {showAnswer && (
@@ -120,7 +123,7 @@ const shadowColor =
         </>
       )}
       <img src="/crisis/assets/snow.svg" alt="snow" className="absolute bottom-0 left-0 w-full block pointer-events-none select-none" />
-
+      
     </div>
   );
 }
